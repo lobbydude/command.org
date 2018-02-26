@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="1" total="9" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="21853" started-at="2018-02-21T18:27:09Z" finished-at="2018-02-21T18:27:30Z">
+    <groups>
+      <group name="functionalTest">
+        <method signature="TestCase1.loginTest()[pri:0, instance:testng.org.TestCase1@59e5ddf]" name="loginTest" class="testng.org.TestCase1"/>
+        <method signature="TestCase2.composeMail()[pri:0, instance:testng.org.TestCase2@536aaa8d]" name="composeMail" class="testng.org.TestCase2"/>
+      </group> <!-- functionalTest -->
+      <group name="smokeTest">
+        <method signature="TestCase1.loginTest()[pri:0, instance:testng.org.TestCase1@59e5ddf]" name="loginTest" class="testng.org.TestCase1"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test name="Test" duration-ms="21853" started-at="2018-02-21T18:27:09Z" finished-at="2018-02-21T18:27:30Z">
+      <class name="testng.org.TestCase2">
+        <test-method status="PASS" signature="composeMail()[pri:0, instance:testng.org.TestCase2@536aaa8d]" name="composeMail" duration-ms="0" started-at="2018-02-21T18:27:20Z" finished-at="2018-02-21T18:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- composeMail -->
+      </class> <!-- testng.org.TestCase2 -->
+      <class name="testng.org.TestCase1">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:testng.org.TestCase1@59e5ddf]" name="loginTest" duration-ms="1" started-at="2018-02-21T18:27:20Z" finished-at="2018-02-21T18:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- testng.org.TestCase1 -->
+      <class name="command.org.Highlight">
+        <test-method status="FAIL" signature="highlightElement()[pri:0, instance:command.org.Highlight@6ee52dcd]" name="highlightElement" duration-ms="11052" started-at="2018-02-21T18:27:09Z" finished-at="2018-02-21T18:27:20Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.net.SocketTimeoutException: timeout
+Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
+System info: host: 'DRN', ip: '192.168.12.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.SocketTimeoutException: timeout
+Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
+System info: host: 'DRN', ip: '192.168.12.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at command.org.Highlight.highlightElement(Highlight.java:16)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.SocketTimeoutException: timeout
+at okio.Okio$4.newTimeoutException(Okio.java:230)
+at okio.AsyncTimeout.exit(AsyncTimeout.java:285)
+at okio.AsyncTimeout$2.read(AsyncTimeout.java:241)
+at okio.RealBufferedSource.indexOf(RealBufferedSource.java:345)
+at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:217)
+at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:212)
+at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:97)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:47)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+... 31 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.socketRead(Unknown Source)
+at java.net.SocketInputStream.read(Unknown Source)
+at java.net.SocketInputStream.read(Unknown Source)
+at okio.Okio$2.read(Okio.java:139)
+at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+... 56 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- highlightElement -->
+      </class> <!-- command.org.Highlight -->
+      <class name="listeners.NewTest">
+        <test-method status="PASS" signature="f()[pri:0, instance:listeners.NewTest@1f57539]" name="f" duration-ms="1" started-at="2018-02-21T18:27:20Z" finished-at="2018-02-21T18:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- listeners.NewTest -->
+      <class name="testng.org.SoftAssertion">
+        <test-method status="FAIL" signature="hardAssert()[pri:0, instance:testng.org.SoftAssertion@2d8f65a4]" name="hardAssert" duration-ms="10" started-at="2018-02-21T18:27:09Z" finished-at="2018-02-21T18:27:09Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at testng.org.SoftAssertion.hardAssert(SoftAssertion.java:21)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hardAssert -->
+        <test-method status="PASS" signature="softAssert()[pri:0, instance:testng.org.SoftAssertion@2d8f65a4]" name="softAssert" duration-ms="3" started-at="2018-02-21T18:27:09Z" finished-at="2018-02-21T18:27:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- softAssert -->
+      </class> <!-- testng.org.SoftAssertion -->
+      <class name="command.org.ActionsClass">
+        <test-method status="FAIL" signature="actionsClass()[pri:0, instance:command.org.ActionsClass@704a52ec]" name="actionsClass" duration-ms="10742" started-at="2018-02-21T18:27:20Z" finished-at="2018-02-21T18:27:30Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.net.SocketTimeoutException: Read timed out
+Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
+System info: host: 'DRN', ip: '192.168.12.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.SocketTimeoutException: Read timed out
+Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
+System info: host: 'DRN', ip: '192.168.12.201', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:219)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at command.org.ActionsClass.actionsClass(ActionsClass.java:17)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.SocketTimeoutException: Read timed out
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.socketRead(Unknown Source)
+at java.net.SocketInputStream.read(Unknown Source)
+at java.net.SocketInputStream.read(Unknown Source)
+at okio.Okio$2.read(Okio.java:139)
+at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+at okio.RealBufferedSource.indexOf(RealBufferedSource.java:345)
+at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:217)
+at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:212)
+at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:97)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:47)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:138)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- actionsClass -->
+      </class> <!-- command.org.ActionsClass -->
+      <class name="command.org.HelloTesters">
+        <test-method status="PASS" signature="test1()[pri:0, instance:command.org.HelloTesters@76f2b07d]" name="test1" duration-ms="0" started-at="2018-02-21T18:27:20Z" finished-at="2018-02-21T18:27:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- command.org.HelloTesters -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
